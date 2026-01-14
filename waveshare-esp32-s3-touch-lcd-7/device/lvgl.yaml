@@ -363,7 +363,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: roboto36_font
                   align: top_left
                   id: print_progress_label
                   text: "--%"
