@@ -38,6 +38,17 @@ sensor:
             format: "%.0f"
             args: [ 'x' ]
 
+  # Filament Heater Humidity
+  - platform: homeassistant
+    entity_id: sensor.office_filament_heater_sensor_humidity
+    id: filament_heater_humidity
+    on_value:
+      - lvgl.label.update:
+          id: dryer_humidity_label
+          text:
+            format: "%.0f"
+            args: [ 'x' ]
+
 
 
 binary_sensor:
@@ -139,10 +150,16 @@ binary_sensor:
     trigger_on_initial_state: true
     on_state:
       then:
-        lvgl.widget.update:
-          id: filament_heater_button
-          state:
-            checked: !lambda return x;
+        - lvgl.widget.update:
+            id: filament_heater_button
+            state:
+              checked: !lambda return x;
+        - lvgl.widget.update:
+            id: filament_heater_icon
+            hidden: !lambda return x;
+        - lvgl.widget.update:
+            id: dryer_humidity_container
+            hidden: !lambda return !x;
 
   # Office Blind 100% (Open)
   - platform: template
