@@ -255,6 +255,29 @@ lvgl:
             on_click:
               - lvgl.page.show: blinds_page
 
+        # =========================================================================
+        # BUTTON: More (Open Extra Controls Page)
+        # =========================================================================
+        # WHAT THIS BUTTON DOES:
+        #   Navigates to the extra controls page.
+        # =========================================================================
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: more_nav_button
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  text: $application
+              - label:
+                  align: bottom_left
+                  text: "More"
+            on_click:
+              - lvgl.page.show: more_page
+
 
         # =========================================================================
         # BUTTON: 3D Printer Power
@@ -636,6 +659,51 @@ lvgl:
                   data:
                     entity_id: cover.office_blind
                     position: "66"
+
+    - id: more_page
+      layout: 
+        type: flex
+        flex_flow: column_wrap
+      scrollbar_mode: "off"
+      scroll_dir: "hor"
+      width: 100%
+      bg_color: Black
+      bg_opa: cover
+      pad_top: 34
+      pad_bottom: 5
+      pad_left: 5
+      pad_right: 5
+
+      widgets:
+
+        # =========================================================================
+        # BUTTON: Back (Return to Main Page)
+        # =========================================================================
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: more_back_button
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  text: $chevron_left
+              - label:
+                  align: bottom_left
+                  text: "Back"
+            on_click:
+              - lvgl.page.show: main_page
+
+        # =========================================================================
+        # LABEL: Page Title
+        # =========================================================================
+        - label:
+            text: "More"
+            styles: roboto15_style
+            align: top_left
+            text_color: 0xFFFFFF
 
         # =========================================================================
         # BUTTON: Blind Semi Closed (33%)
