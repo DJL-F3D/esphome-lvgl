@@ -183,11 +183,6 @@ sensor:
           text:
             format: "%.0f°"
             args: [ 'x' ]
-      - lvgl.label.update:
-          id: aircon_lab_target_label
-          text:
-            format: "%.0f°"
-            args: [ 'x' ]
       - lvgl.arc.update:
           id: aircon_target_arc
           value: !lambda return (int)x;
