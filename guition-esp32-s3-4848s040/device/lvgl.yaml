@@ -956,16 +956,13 @@ lvgl:
                   width: 120px
                   height: 60px
                   x: 10
-                  y: 10
+                  y: 50
                   styles: control
                   widgets:
                     - label:
                         text_font: $icon_font
                         align: left_mid
                         text: $chevron_left
-                    - label:
-                        align: right_mid
-                        text: "Back"
                   on_click:
                     - lvgl.page.show: aircon_page
 
