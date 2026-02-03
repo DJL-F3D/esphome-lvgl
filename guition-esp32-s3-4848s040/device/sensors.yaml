@@ -151,6 +151,11 @@ sensor:
           text:
             format: "%.0f°"
             args: [ 'x' ]
+      - lvgl.label.update:
+          id: aircon_lab_current_label
+          text:
+            format: "%.0f°"
+            args: [ 'x' ]
 
   # ===========================================================================
   # SENSOR: Aircon Target Temperature
@@ -175,6 +180,14 @@ sensor:
           text:
             format: "%.0f°"
             args: [ 'x' ]
+      - lvgl.label.update:
+          id: aircon_lab_target_label
+          text:
+            format: "%.0f°"
+            args: [ 'x' ]
+      - lvgl.widget.update:
+          id: aircon_target_arc
+          value: !lambda return (int)x;
 
   # ===========================================================================
   # SENSOR: Centauri Carbon Print Progress
