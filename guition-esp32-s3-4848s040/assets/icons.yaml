@@ -26,6 +26,14 @@ font:
       "\U000F07DE",  # mdi-filament
       "\U000F0317",  # mdi-lan
       "\U000F0425",  # mdi-power
+      "\U000F050F",  # mdi-thermometer
+      ]
+  - file: 'https://github.com/Templarian/MaterialDesign-Webfont/raw/v7.4.47/fonts/materialdesignicons-webfont.ttf'
+    id: icon_font_small
+    size: 20
+    bpp: 4
+    glyphs: [
+      "\U000F050F",  # mdi-thermometer
       ]
 
 # Map icons to names
@@ -50,3 +58,4 @@ substitutions:
   filament:       "\U000F07DE"
   lan:            "\U000F0317"
   power:          "\U000F0425"
+  thermometer:    "\U000F050F"

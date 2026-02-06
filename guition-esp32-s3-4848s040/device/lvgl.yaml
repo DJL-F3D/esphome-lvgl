@@ -1175,14 +1175,14 @@ lvgl:
                   rotation: 0
                   value: 44
                   arc_width: 18
-                  arc_color: 0x2F2A28
+                  arc_color: 0x3A3A3A
                   clickable: false
                   adjustable: false
                   indicator:
-                    arc_color: 0x2F2A28
+                    arc_color: 0x3A3A3A
                     arc_width: 0
                   knob:
-                    bg_color: 0x2F2A28
+                    bg_color: 0x3A3A3A
 
               # Delta arc between current and target temperatures
               - arc:
@@ -1222,7 +1222,7 @@ lvgl:
                   arc_width: 0
                   arc_color: 0x000000
                   indicator:
-                    arc_color: 0x2F2A28
+                    arc_color: 0x8A3F1E
                     arc_width: 18
                   knob:
                     bg_color: 0x000000
@@ -1281,6 +1281,7 @@ lvgl:
                         service: climate.set_temperature
                         data:
                           entity_id: climate.central_heating
+                          hvac_mode: heat
                           temperature: !lambda return (float)x / 2.0f;
 
               # Mode label
@@ -1301,13 +1302,34 @@ lvgl:
                   align: center
 
               # Current temperature label (below)
-              - label:
-                  id: heating_lab_current_label
-                  text: "--.-°C"
-                  text_font: roboto19_font
-                  text_color: 0xB0B0B0
+              - obj:
+                  id: heating_lab_current_row
+                  width: SIZE_CONTENT
+                  height: SIZE_CONTENT
                   align: center
                   y: 55
+                  bg_opa: TRANSP
+                  border_width: 0
+                  pad_all: 0
+                  clickable: false
+                  layout:
+                    type: flex
+                    flex_flow: row
+                    flex_align_cross: center
+                  widgets:
+                    - label:
+                        id: heating_lab_current_icon
+                        text: $thermometer
+                        text_font: icon_font_small
+                        text_color: 0xE06A2A
+                        align: center
+                        pad_right: 6
+                    - label:
+                        id: heating_lab_current_value
+                        text: "--.-°C"
+                        text_font: roboto19_font
+                        text_color: 0xE06A2A
+                        align: center
 
               # Down button (-0.5C)
               - button:
@@ -1332,6 +1354,7 @@ lvgl:
                         service: climate.set_temperature
                         data:
                           entity_id: climate.central_heating
+                          hvac_mode: heat
                           temperature: !lambda |-
                             if (id(heating_target_temperature).has_state()) {
                               return id(heating_target_temperature).state - 0.5f;
@@ -1361,6 +1384,7 @@ lvgl:
                         service: climate.set_temperature
                         data:
                           entity_id: climate.central_heating
+                          hvac_mode: heat
                           temperature: !lambda |-
                             if (id(heating_target_temperature).has_state()) {
                               return id(heating_target_temperature).state + 0.5f;
