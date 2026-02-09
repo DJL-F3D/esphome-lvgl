@@ -125,8 +125,7 @@ display:
     auto_clear_enabled: false
     color_order: bgr
     pclk_frequency: 51.2MHz
-    pclk_inverted: false
-    lane_bit_rate: 1000
+    lane_bit_rate: 1000000000
     hsync_pulse_width: 24
     hsync_back_porch: 136
     hsync_front_porch: 160
