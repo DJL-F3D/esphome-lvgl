@@ -3,7 +3,7 @@ font:
   - file: "gfonts://Roboto@300"
     id: roboto48_font
     size: 48
-    bpp: 4
+    bpp: 8
 
   - file: "gfonts://Roboto"
     id: roboto20_font
