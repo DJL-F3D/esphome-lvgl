@@ -32,7 +32,7 @@ lvgl:
             width: 480px
             height: 480px
             src: album_art_background
-            opa: 70%
+            opa: 100%
 
         # Song title + artist sit on the same row as the control buttons (left side)
         - label:
