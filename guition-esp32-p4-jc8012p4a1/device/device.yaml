@@ -2,7 +2,6 @@
 esp32:
   variant: ESP32P4
   flash_size: 16MB
-  cpu_frequency: 400MHz
   framework:
     type: esp-idf
     advanced:
