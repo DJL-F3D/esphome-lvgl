@@ -60,7 +60,7 @@ sensor:
   #   lvgl.yaml → temperatures label (id: temperatures)
   # ===========================================================================
   - platform: homeassistant
-    entity_id: sensor.office_temperature
+    entity_id: climate.bed_2
     id: office_temperature
     on_value:
       - lvgl.label.update:
@@ -142,7 +142,7 @@ sensor:
   #   lvgl.yaml → aircon_temp_label
   # ===========================================================================
   - platform: homeassistant
-    entity_id: climate.office_air_conditioner
+    entity_id: climate.bed_2
     id: aircon_current_temperature
     attribute: current_temperature
     on_value:
