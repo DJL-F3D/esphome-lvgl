@@ -7,6 +7,7 @@ font:
     size: 40
     bpp: 4
     glyphs: [
+      # ── Original icons ──────────────────────────────────────────────
       "\U000F0335",  # mdi-lightbulb
       "\U000F042B",  # mdi-printer-3d
       "\U000F0D43",  # mdi-air-filter
@@ -27,35 +28,59 @@ font:
       "\U000F0317",  # mdi-lan
       "\U000F0425",  # mdi-power
       "\U000F050F",  # mdi-thermometer
-      ]
+      # ── Added for Office Bed 2 / Scenes pages ───────────────────────
+      "\U000F06E8",  # mdi-lightbulb-outline    → Eave Light
+      "\U000F0342",  # mdi-power-plug           → Bed Switch
+      "\U000F0025",  # mdi-air-conditioner      → AC
+      "\U000F0176",  # mdi-coffee               → Breakfast scene
+      "\U000F0E52",  # mdi-silverware-fork-knife → Dinner scene
+      "\U000F04B7",  # mdi-sofa                 → Formal Lounging scene
+      "\U000F04B2",  # mdi-sleep                → Before Bed scene
+      "\U000F0ECB",  # mdi-television-play      → TV Dark scene
+      "\U000F013C",  # mdi-chevron-right        → nav arrow
+    ]
+
   - file: 'https://github.com/Templarian/MaterialDesign-Webfont/raw/v7.4.47/fonts/materialdesignicons-webfont.ttf'
     id: icon_font_small
     size: 20
     bpp: 4
     glyphs: [
       "\U000F050F",  # mdi-thermometer
-      ]
+      "\U000F0141",  # mdi-chevron-left
+      "\U000F013C",  # mdi-chevron-right
+    ]
 
-# Map icons to names
+# Map icons to substitution names
 substitutions:
-  lightbulb:      "\U000F0335"
-  printer:        "\U000F042B"
-  aircon:         "\U000F0D43"
-  ledstrip:       "\U000F1051"
-  led_strip_variant: "\U000F1051"
-  package:        "\U000F03D7"
-  lights:         "\U000F07D6"
-  blinds_closed:  "\U000F00AC"
-  blinds_open:    "\U000F1011"
-  nightlight:     "\U000F1A4C"
-  network:        "\U000F1087"
-  videocall:      "\U000F036B"
-  application:    "\U000F0614"
-  chevron_left:   "\U000F0141"
-  chevron_up:     "\U000F0143"
-  chevron_down:   "\U000F0140"
-  battery:        "\U000F089E"
-  filament:       "\U000F07DE"
-  lan:            "\U000F0317"
-  power:          "\U000F0425"
-  thermometer:    "\U000F050F"
+  # ── Original mappings ──────────────────────────────────────────────────
+  lightbulb:            "\U000F0335"
+  printer:              "\U000F042B"
+  aircon:               "\U000F0D43"
+  ledstrip:             "\U000F1051"
+  led_strip_variant:    "\U000F1051"
+  package:              "\U000F03D7"
+  lights:               "\U000F07D6"
+  blinds_closed:        "\U000F00AC"
+  blinds_open:          "\U000F1011"
+  nightlight:           "\U000F1A4C"
+  network:              "\U000F1087"
+  videocall:            "\U000F036B"
+  application:          "\U000F0614"
+  chevron_left:         "\U000F0141"
+  chevron_up:           "\U000F0143"
+  chevron_down:         "\U000F0140"
+  battery:              "\U000F089E"
+  filament:             "\U000F07DE"
+  lan:                  "\U000F0317"
+  power:                "\U000F0425"
+  thermometer:          "\U000F050F"
+  # ── Added mappings ────────────────────────────────────────────────────
+  lightbulb_outline:    "\U000F06E8"
+  power_plug:           "\U000F0342"
+  air_conditioner:      "\U000F0025"
+  coffee:               "\U000F0176"
+  silverware:           "\U000F0E52"
+  sofa:                 "\U000F04B7"
+  sleep:                "\U000F04B2"
+  television:           "\U000F0ECB"
+  chevron_right:        "\U000F013C"
