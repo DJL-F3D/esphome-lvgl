@@ -1,8 +1,8 @@
 # ESP32-S3-Touch-LCD-7
 substitutions:
   name: "lcd01"
-  friendly_name: "Kitchen"
-  room: "Kitchen"
+  friendly_name: "DJL Office"
+  room: "DJL Office"
 
 # Wifi Setup
 wifi:
